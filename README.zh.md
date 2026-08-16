@@ -23,6 +23,7 @@ dsh plugin --profile web add dshmarket
 
 ## 目录
 
+- [🖥️ 桌面客户端](#-桌面客户端)
 - [插件](#插件)
   - [🎨 UI 增强](#-ui-增强)
   - [🎭 主题与外观](#-主题与外观)
@@ -38,6 +39,10 @@ dsh plugin --profile web add dshmarket
   - [🎮 娱乐](#-娱乐)
 - [徽章](#徽章)
 - [免责声明](#免责声明)
+
+## 🖥️ 桌面客户端
+
+- [988hj7tczd-oss/harness-desktop](https://github.com/988hj7tczd-oss/harness-desktop) — DeepSeek Harness 开箱即用桌面端：下载安装双击即聊，无需终端与环境配置。内置 dsh 引擎，流式聊天 + 思考过程可视化，任务面板，Agent 记忆自动沉淀，托盘常驻；macOS / Windows / Linux，支持 npm、Homebrew、GitHub Releases 与国内 Gitee 镜像。
 
 ## 插件
 
@@ -476,6 +481,7 @@ dsh plugin --profile web add dshmarket
 - [kyo615/dsh-browser-control](https://github.com/kyo615/dsh-browser-control) — 基于 Playwright MCP 的 AI 浏览器控制：驱动真实可见的 Chrome（导航/点击/输入/快照，约 80 个 browser_* 工具），并在 GUI 内嵌实时截图面板，每次操作后自动刷新。
 - [guo6x/dsh-pilot](https://github.com/guo6x/dsh-pilot) — 零依赖浏览器操控：agent 通过 CDP 驾驶真实 headless Edge/Chrome（导航/点击/输入/按键/JS/截图，8 个 `pilot_*` 工具），Web GUI 内可拖拽驾驶舱面板实时围观——文本优先快照适配纯文本模型，无需 Playwright、无需 API key。
 - [Anionex/dsh-computer-use](https://github.com/Anionex/dsh-computer-use) — macOS 电脑控制：Accessibility 观测、过期状态拒绝、作用域权限与安全输入。
+- [988hj7tczd-oss/dsh-computer-use](https://github.com/988hj7tczd-oss/dsh-computer-use) — 真人式电脑操作：独立彩虹渐变光标滑行到目标后像素级真实点击（screen_observe + computer_click/type/key/scroll/drag/wait），AX 树观测零视觉 token 成本，虚拟光标隔离不抢真实鼠标，内置危险词审批与密码框保护；跨平台（macOS / Windows / Linux），基于 cua-driver，为 harness-desktop 而生。
 - [kunjinkao-os/dsh-mobile-gui-agent](https://github.com/kunjinkao-os/dsh-mobile-gui-agent) — Android GUI Agent：ADB 截图、压缩 UI hierarchy 定位、逐步动作验证、审批和 Mobile Web 视图。
 - [omdsh-dev/dsh-data-agent](https://github.com/omdsh-dev/dsh-data-agent) — 让 AI 帮你连数据库、写 SQL。
 - [omdsh-dev/dsh-toolkit](https://github.com/omdsh-dev/dsh-toolkit) — 零依赖工具包：time / encoding / json / calculator / csv / regex / markdown / diff / stat / schema 十件套一键安装。

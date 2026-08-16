@@ -23,6 +23,7 @@ dsh plugin --profile web add dshmarket
 
 ## Contents
 
+- [Desktop Clients](#desktop-clients)
 - [Plugins](#plugins)
   - [UI Enhancements](#ui-enhancements)
   - [Themes & Appearance](#themes--appearance)
@@ -38,6 +39,10 @@ dsh plugin --profile web add dshmarket
   - [Just for Fun](#just-for-fun)
 - [Badge](#badge)
 - [Disclaimer](#disclaimer)
+
+## Desktop Clients
+
+- [988hj7tczd-oss/harness-desktop](https://github.com/988hj7tczd-oss/harness-desktop) - Out-of-the-box desktop client for DeepSeek Harness: download, install, double-click and chat — no terminal, no environment setup. Bundled dsh engine, streaming chat with thinking visualization, task panel, agent memory, tray resident; macOS / Windows / Linux via npm, Homebrew, GitHub Releases, and a Gitee mirror for CN users.
 
 ## Plugins
 
@@ -476,6 +481,7 @@ dsh plugin --profile web add dshmarket
 - [kyo615/dsh-browser-control](https://github.com/kyo615/dsh-browser-control) - Playwright MCP browser control for AI agents: drive a real, visible Chrome (navigate/click/type/snapshot + ~80 browser_* tools), with a live screenshot panel embedded in the GUI that refreshes after every action.
 - [guo6x/dsh-pilot](https://github.com/guo6x/dsh-pilot) - Zero-dependency browser control: drive a real headless Edge/Chrome over CDP with 8 `pilot_*` tools (navigate/click/type/keys/eval/screenshot) plus a live draggable cockpit panel in the Web GUI - text-first snapshots for text-only models, no Playwright, no API key.
 - [Anionex/dsh-computer-use](https://github.com/Anionex/dsh-computer-use) - Accessibility-first macOS computer use: fresh observations, stale-state rejection, scoped permissions, and safe input.
+- [988hj7tczd-oss/dsh-computer-use](https://github.com/988hj7tczd-oss/dsh-computer-use) - Human-like computer use for DSH: an independent rainbow-gradient cursor glides to the target and clicks at pixel level (screen_observe + computer_click/type/key/scroll/drag/wait), AX-tree observations cost zero vision tokens, virtual-cursor isolation never steals the real mouse, danger-word approval and password-box protection are built in; cross-platform (macOS / Windows / Linux) on cua-driver, designed for harness-desktop.
 - [kunjinkao-os/dsh-mobile-gui-agent](https://github.com/kunjinkao-os/dsh-mobile-gui-agent) - Android GUI Agent with ADB screenshots, compact UI hierarchy grounding, verified iterative actions, approvals, and a Mobile Web view.
 - [omdsh-dev/dsh-data-agent](https://github.com/omdsh-dev/dsh-data-agent) - Let the AI connect to databases and write SQL for you.
 - [omdsh-dev/dsh-toolkit](https://github.com/omdsh-dev/dsh-toolkit) - Zero-dependency toolkit: time / encoding / json / calculator / csv / regex / markdown / diff / stat / schema — ten deterministic tools in one install.
