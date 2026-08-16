@@ -429,6 +429,7 @@ dsh plugin --profile web add dshmarket
 - [nanpaidashi/dsh-honcho-sync](https://github.com/nanpaidashi/dsh-honcho-sync) — Honcho 记忆桥接：每轮对话自动同步到自建 Honcho 记忆服务（NAS/服务器/云），提供 recall/search/remember/context/status 工具，会话启动自动注入上下文，内置可视化设置面板。
 
 ### 🛠️ 工具与能力
+- [988hj7tczd-oss/dsh-computer-use](https://github.com/988hj7tczd-oss/dsh-computer-use) — 跨平台 Computer Use 插件：虚拟鼠标真人操作（screen_observe / computer_click / type / key / scroll / drag 共 11 个工具），AX 语义树零视觉成本 + GLM-4V-Flash 免费视觉兜底，安全护栏（快照 TTL / 应用白名单 / 危险操作审批 / 密码框保护）。
 - [Asher-2000/dsh-expert-mode](https://github.com/Asher-2000/dsh-expert-mode) — 专家模式 agent preset：统筹团长 + 11 位领域专家子代理（数据分析/文案/法务/产品/前端/UI-UX/架构/社交运营/增长/量化/财务），按任务特性自动委派。
 - [Cheng-cheng9669/dsh-cache-precision](https://github.com/Cheng-cheng9669/dsh-cache-precision) — 把内置缓存命中率原位显示为 3 位小数，并加宽底部统计行避免内容被截断。
 - [caoyiwei850/dsh-ssh-ops](https://github.com/caoyiwei850/dsh-ssh-ops) — DSH SSH 运维终端：在主对话中直接指挥已连接的服务器（ssh_connect/ssh_exec/ssh_read/ssh_write/ssh_disconnect），右侧保留可交互的 xterm.js 终端。
