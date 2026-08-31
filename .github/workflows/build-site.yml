@@ -167,8 +167,13 @@ jobs:
       # the top of this file holds.
       - name: publish the catalog to npm
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-        # Trusted publishing (OIDC) — the id-token permission above is what
-        # authorizes it, so there is no token to leak or rotate.
+        # Publish to this fork's OWN scoped package (@jerryweizhihao/dsh-plugin-catalog).
+        # Auth via the encrypted NPM_TOKEN repo secret. Trusted publishing (OIDC)
+        # only authorizes upstream's package; this fork is not a trusted publisher
+        # for it, so an explicit publish token is used instead.
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm install -g npm@latest  # trusted publishing needs npm >= 11.5
+          npm install -g npm@latest  # publish needs npm >= 11.5
+          npm config set "//registry.npmjs.org/:_authToken" "${NODE_AUTH_TOKEN}"
           node scripts/publish-catalog.mjs

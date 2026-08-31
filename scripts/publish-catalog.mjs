@@ -35,7 +35,7 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 
-const PKG = 'dsh-plugin-catalog'
+const PKG = '@jerryweizhihao/dsh-plugin-catalog'
 const BUILT = 'docs/plugins.json'
 const REGISTRY = 'https://registry.npmjs.org'
 
@@ -79,7 +79,7 @@ export function catalogVersion(now, run) {
 
 /** The README the package page shows. Short, because it is shipped to readers. */
 function readme(version, entries) {
-  return `# dsh-plugin-catalog
+  return `# @jerryweizhihao/dsh-plugin-catalog
 
 The DeepSeek Harness plugin catalog as a single JSON file — the same
 \`plugins.json\` served at <https://awesome-dsh-plugin.com/plugins.json>,
@@ -90,7 +90,7 @@ slow to reach from some networks, and the public GitHub proxies that would
 otherwise help refuse non-github.com hostnames.
 
 \`\`\`js
-import catalog from 'dsh-plugin-catalog/plugins.json' with { type: 'json' }
+import catalog from '@jerryweizhihao/dsh-plugin-catalog/plugins.json' with { type: 'json' }
 \`\`\`
 
 - **Entries:** ${entries}
