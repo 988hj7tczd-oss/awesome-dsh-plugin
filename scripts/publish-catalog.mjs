@@ -120,10 +120,10 @@ fs.writeFileSync(path.join(stage, 'package.json'), JSON.stringify({
   name: PKG,
   version,
   description: `The DeepSeek Harness plugin catalog (${entries} entries) · DeepSeek Harness 插件目录`,
-  homepage: 'https://awesome-dsh-plugin.com',
+  homepage: 'https://988hj7tczd-oss.github.io/awesome-dsh-plugin',
   repository: {
     type: 'git',
-    url: 'git+https://github.com/awesome-dsh-plugin/awesome-dsh-plugin.git',
+    url: 'git+https://github.com/988hj7tczd-oss/awesome-dsh-plugin.git',
   },
   license: 'CC0-1.0',
   keywords: ['dsh', 'dsh-plugin', 'deepseek-harness', 'deepseek', 'catalog', 'registry'],
