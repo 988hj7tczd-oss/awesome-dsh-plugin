@@ -95,11 +95,11 @@ jobs:
       - name: Build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # The nightly run is the authoritative refresh: it re-checks every
-          # entry regardless of cached verdicts, so a plugin that publishes to
-          # npm can never be stuck on a stale "not published" (see #487).
-          # Push-triggered runs stay incremental.
-          PROBE_ALL: ${{ (github.event_name == 'schedule' || inputs.probe_all) && '1' || '' }}
+          # Scheduled and push-triggered runs stay incremental: they refresh
+          # only entries that are new or past their recheck window. A full
+          # sweep is an explicit manual operation, because the GitHub API
+          # budget is shared with the rest of the repository's Actions.
+          PROBE_ALL: ${{ inputs.probe_all && '1' || '' }}
         run: |
           # Probing is for the nightly run and manual dispatch only. A push
           # build deploys what is already committed or cached; it does not go
