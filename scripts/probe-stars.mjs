@@ -30,13 +30,12 @@ import LOCALES from '../site/locales.mjs'
 
 const STARS_FILE = 'data/stars.json'
 const CONCURRENCY = 10
-// A GitHub Actions token is capped at ~1000 requests per hour per repository,
-// shared by every workflow. Probing all ~1300 entries on each push blew that
-// budget on its own — with a dozen merges in an hour the Submission gate was
-// left with nothing and died mid-run, which is how submissions came to sit
-// with no verdict at all. Push-triggered runs now refresh only what is new or
-// a day stale; the nightly PROBE_ALL run still sweeps everything.
-const RECHECK_DAYS = Number(process.env.PROBE_RECHECK_DAYS ?? 1)
+// Keep regular runs incremental: the GitHub API budget is shared with the
+// repository's other Actions, so refreshing every entry daily is unnecessary
+// and can prevent later jobs from creating Pages deployments. New entries and
+// entries older than this window are still refreshed; set PROBE_ALL=1 only for
+// an explicit manual full sweep.
+const RECHECK_DAYS = Number(process.env.PROBE_RECHECK_DAYS ?? 7)
 const PROBE_ALL = process.env.PROBE_ALL === '1'
 // Entries added since the last probe legitimately have no count yet, and a
 // repository that 404s never will, so this is a floor rather than a match.
