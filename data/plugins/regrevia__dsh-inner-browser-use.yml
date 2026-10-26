@@ -1,0 +1,6 @@
+url: https://github.com/regrevia/dsh-inner-browser-use
+name: regrevia/dsh-inner-browser-use
+category: browser
+description:
+  en: "Drives the chat's own right-sidebar browser tab: opens a page, moves a visible pointer over the control it acts on, clicks, types, uploads and downloads files into the chat folder, and keeps site logins across sessions."
+  zh: "驱动这个对话自己右栏的浏览器标签：打开页面，移动可见的指针到要操作的控件上，点击、输入、把上传与下载的文件放进这个对话的文件夹，站点登录状态跨会话保留。"
